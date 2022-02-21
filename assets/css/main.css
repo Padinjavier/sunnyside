@@ -59,7 +59,6 @@ a {
 	width: 100%;
 	background: #3dbeff;
 	height: 100vh;
-	position: relative;
 }
 .header {
 	width: 100%;
@@ -575,10 +574,11 @@ a {
 .menu-testimonial {
     display: none;
     position: absolute;
-    top: 60px;
-    right: 30px;
+    top: 100%;
+    right: 8%;
 	padding:15px 0px 15px 0px ;
     width: 100px;
+	z-index: 1;
 	background-color: var(--color-gray-blue);
 	justify-content: space-around;
 	align-items: center;
@@ -608,16 +608,20 @@ a {
 
 
 
-
-
-
-
-.profile{
-	position: relative;
-	display: none;
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    display: none;
 }
-.profile.active {
+/* .profile.active {
 	display: flex;
     flex-direction: column;
+    animation: showSlider 1s ease-in;
+} */
+.profile.active {
+    display: flex;
     animation: showSlider 1s ease-in;
 }
