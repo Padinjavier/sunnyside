@@ -545,13 +545,10 @@ a {
 .control-right {
 	right: 0;
 }
-
-
 .carousel-item {
 	position: relative;
 	display: none;
 }
-
 .carousel-item.active {
 	display: flex;
 	flex-direction: column;
