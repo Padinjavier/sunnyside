@@ -519,15 +519,15 @@ a {
 	cursor: pointer;
 	z-index: 1;
 	transition: background linear 0.3s;
-	font-size: 40px;
+	font-size: 60px;
 	color: #ff6105;
 	top: 50vh;
 }
 .control-right:hover,
 .control-left:hover {
 	color: rgb(216, 236, 32);
-	font-size: 55px;
-	top: 49vh;
+	font-size: 65px;
+	top: 50vh;
 }
 .control-left {
 	left: 0;
@@ -556,56 +556,60 @@ a {
 		clip-path: circle(150% at 50% 50%);
 	}
 }
-
-
-
 .header-testimonial{
-	width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 4%;
+	padding-top:5%;
 	position: relative;
-    align-items: center;
 }
-.icon-menu-testimonials{
-	font-size: 20px;
-	cursor: pointer;
-}
-.menu-testimonial {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 8%;
-	padding:15px 0px 15px 0px ;
-    width: 100px;
+.header-menutestimonial{
+	position: absolute;
+	top: 90px;
+	right: 0;
 	z-index: 1;
-	background-color: var(--color-gray-blue);
-	justify-content: space-around;
-	align-items: center;
 }
-.menu-testimonial::after {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    border-right: 5px solid var(--color-gray-blue);
-    border-top: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-bottom: 5px solid var(--color-gray-blue);
+.menu-testimonial{
+	width: auto;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	margin-right: 5%;
 }
+
 .menu-itemtestimonial{
-	color: var(--color-dark-blue);
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 10px;
 }
-.menu-itemtestimonial:hover{
-	position: static;
-	color: #fad400;
-	font-size: 25px;
-	cursor: pointer;
+.img-menu{
+	width: 15%;
+	border-radius: 100px;
+	border: 2px solid rgb(51, 191, 226);
+	opacity: 0.6;
 }
-.menu-testimonial.active2{
+.img-menu:hover{
+	border: 2px solid rgb(30, 245, 180);
+	
+}
+.img-menu.active{
+	width: 18%;
+	opacity: 1;
+	border: 2px solid rgb(0, 255, 106);
+}
+.menu-name{
+	padding: 2% 5% 2% 5%;
+	font-family: var(--font-title);
+	color: rgb(255, 255, 255);
+	display: none;
+	background-color: rgb(209, 64, 255);
+	border-radius: 10px 10px 10px 10px;
+}
+
+.menu-name.active{
 	display: flex;
 }
-
 
 
 .profile {
@@ -615,12 +619,9 @@ a {
     flex-direction: column;
     position: relative;
     display: none;
+	padding: 0px 15%;
+	height: calc(100vh - 20%);
 }
-/* .profile.active {
-	display: flex;
-    flex-direction: column;
-    animation: showSlider 1s ease-in;
-} */
 .profile.active {
     display: flex;
     animation: showSlider 1s ease-in;

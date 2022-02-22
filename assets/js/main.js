@@ -11,21 +11,6 @@ buttonMenu.addEventListener('click', () => {
 })
 
 
-// segundo menu
-const buttonMenu2 = document.querySelector('#icon-menu-testimonials')
-const menu2 = document.querySelector('#menu-testimonial')
-
-
-
-// forma corta
-buttonMenu2.addEventListener('click', () => {
-	toggleElement(menu2, 'active2')
-})
-
-
-
-
-
 const $sliders1 = document.querySelectorAll('.carousel-item')
 const $prev1 = document.querySelector('#prev')
 const $next1 = document.querySelector('#next')
@@ -67,44 +52,70 @@ $next1.addEventListener('click', () => {
 
 
 
+// testimonios
+const test1 = document.querySelector('#test1')
+const test2 = document.querySelector('#test2')
+const test3 = document.querySelector('#test3')
+
+const testimoni1 = document.querySelector('#profile1')
+const testimoni2 = document.querySelector('#profile2')
+const testimoni3 = document.querySelector('#profile3')
+
+const txt1 = document.querySelector('#text-1')
+const txt2 = document.querySelector('#text-2')
+const txt3 = document.querySelector('#text-3')
 
 
-const $sliders2 = document.querySelectorAll('.profile')
-const $prev2 = document.querySelector('#prev-testimonial')
-const $next2 = document.querySelector('#next-testimonial')
+test1.addEventListener('click', () => {
+	test1.classList.add('active')
+	testimoni1.classList.add('active')
+	txt1.classList.add('active')
 
-const nextSlider2 = (sliders2) => {
-	const totalsliders2 = sliders2.length - 1
-	let indice
-	sliders2.forEach((slider2, i) => {
-		if (slider2.classList.contains('active')) {
-			slider2.classList.remove('active')
-			indice = i + 1
-			if (indice > totalsliders2) indice = 0
-		}
-	})
+	if(test2.classList.contains('active')||
+		test3.classList.contains('active')){
 
-	sliders2[indice].classList.add('active')
-}
-const prevSlider2 = (sliders2) => {
-	const totalsliders2 = sliders2.length - 1
-	let indice
-	// bloqueo 
-	sliders2.forEach((slider2, i) => {
-		if (slider2.classList.contains('active')& i>0) {
-			slider2.classList.remove('active')
-			indice = i - 1
-			if (indice < 0) indice = totalsliders2
-		}
-	})
-	sliders2[indice].classList.add('active')
-}
-// izquierda
-$prev2.addEventListener('click', () => {
-	prevSlider2($sliders2)
+		test2.classList.remove('active')
+		testimoni2.classList.remove('active')
+		txt2.classList.remove('active')
+
+		test3.classList.remove('active')
+		testimoni3.classList.remove('active')
+		txt3.classList.remove('active')
+	}
 })
-// derecha
-$next2.addEventListener('click', () => {
-	nextSlider2($sliders2)
+
+test2.addEventListener('click', () => {
+		test2.classList.add('active')
+		testimoni2.classList.add('active')
+		txt2.classList.add('active')
+
+	if(test1.classList.contains('active')||
+		test3.classList.contains('active')){
+
+		test1.classList.remove('active')
+		testimoni1.classList.remove('active')
+		txt1.classList.remove('active')
+
+		test3.classList.remove('active')
+		testimoni3.classList.remove('active')
+		txt3.classList.remove('active')
+	}
 })
-document.onload = runSlider2
+
+test3.addEventListener('click', () => {
+	test3.classList.add('active')
+	testimoni3.classList.add('active')
+	txt3.classList.add('active')
+
+	if(test1.classList.contains('active')||
+		test2.classList.contains('active')){
+
+		test1.classList.remove('active')
+		testimoni1.classList.remove('active')
+		txt1.classList.remove('active')
+
+		test2.classList.remove('active')
+		testimoni2.classList.remove('active')
+		txt2.classList.remove('active')
+	}
+})
