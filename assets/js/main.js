@@ -4,12 +4,10 @@ const menu = document.querySelector('#menu')
 const toggleElement = (element, nameClass) => {
 	element.classList.toggle(nameClass)
 }
-
 // forma corta
 buttonMenu.addEventListener('click', () => {
 	toggleElement(menu, 'active')
 })
-
 
 const $sliders1 = document.querySelectorAll('.carousel-item')
 const $prev1 = document.querySelector('#prev')
@@ -25,7 +23,6 @@ const nextSlider1 = (sliders1) => {
 			if (indice > totalSliders1) indice = 0
 		}
 	})
-
 	sliders1[indice].classList.add('active')
 }
 const prevSlider1 = (sliders1) => {
@@ -51,7 +48,6 @@ $next1.addEventListener('click', () => {
 })
 
 
-
 // testimonios
 const test1 = document.querySelector('#test1')
 const test2 = document.querySelector('#test2')
@@ -65,12 +61,10 @@ const txt1 = document.querySelector('#text-1')
 const txt2 = document.querySelector('#text-2')
 const txt3 = document.querySelector('#text-3')
 
-
 test1.addEventListener('click', () => {
 	test1.classList.add('active')
 	testimoni1.classList.add('active')
 	txt1.classList.add('active')
-
 	if(test2.classList.contains('active')||
 		test3.classList.contains('active')){
 
@@ -88,7 +82,6 @@ test2.addEventListener('click', () => {
 		test2.classList.add('active')
 		testimoni2.classList.add('active')
 		txt2.classList.add('active')
-
 	if(test1.classList.contains('active')||
 		test3.classList.contains('active')){
 
@@ -106,7 +99,6 @@ test3.addEventListener('click', () => {
 	test3.classList.add('active')
 	testimoni3.classList.add('active')
 	txt3.classList.add('active')
-
 	if(test1.classList.contains('active')||
 		test2.classList.contains('active')){
 
