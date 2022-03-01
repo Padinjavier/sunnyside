@@ -287,26 +287,32 @@ a {
 	color: var(--color-gray-blue);
 }
 /* inicio-última parte */
+.parte-final{
+	height: 100vh;
+	background: #95d4c6;
+}
 .img-gallery {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
 .img-gallery img {
 	width: 100%;
-}
-.img-gallery picture {
-	display: flex;
+	vertical-align: middle;
 }
 .infoo-fin{
-	height: 10vh;
-}
-.option-menu {
-	flex-direction: column;
-	width: 100%;
-}
-.title-font {
 	display: flex;
-	align-items: center;
+    flex-direction: column;
+    background: #95d4c6;
+    width: 100%;
+    height: 100ch;
+    justify-content: space-evenly;
+}
+.option-menu,
+.rs {
+	text-align: center;
+}
+.option-item{
+	margin-top: 20px;
 }
 .font {
 	width: auto;
@@ -316,27 +322,15 @@ a {
 		brightness(55%) contrast(91%);
 	margin-bottom: 40px;
 }
-.option-menu {
-	display: flex;
-	color: var(--color-dark-cyan);
-	background: #95d4c6;
-	padding: 60px 0 ;
-	justify-content: center;
-}
-.option {
-	display: flex;
-	justify-content: space-around;
-}
 .itemone {
 	color: var(--color-dark-cyan);
-	transition: color 0.2s linear;
 }
-.itemone:hover {
-	filter: brightness(60%);
+.itemone:hover,
+.fab:hover {
+	filter: brightness(50%);
 }
 .rs {
 	display: flex;
-	background: #95d4c6;
 	justify-content: center;
 	column-gap: 20px;
 	padding: 40px 0;
@@ -344,10 +338,6 @@ a {
 .fab {
 	cursor: pointer;
 	color: var(--color-dark-cyan);
-	transition: color 0.2s linear;
-}
-.fab:hover {
-	filter: brightness(60%);
 }
 /* fin-última parte */
 .control-left,
@@ -504,6 +494,9 @@ a {
 	.menu-name{
 		font-size: 13px;
 	}
+	.img-gallery {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 @media screen and (min-width: 800px) {
 	.icon-menu {
@@ -579,14 +572,6 @@ a {
 		max-width: 350px;
 		margin-bottom: 60px;
 	}
-	.option {
-		justify-content: center;
-		column-gap: 50px;
-	}
-	.img-gallery {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-	}
 	.option-menu{
 		height: 30vh;
 	}
@@ -633,14 +618,6 @@ a {
 		text-align: end;
 	}
 	.profiles-1{
-		justify-content: center;
-	}
-
-	.img-gallery {
-		height: 50vh;
-	}
-	.option-menu{
-		height: 50vh;
 		justify-content: center;
 	}
 	.header-menutestimonial{
